@@ -8,10 +8,10 @@ import {
 const router: Router = Router();
 
 router.get('/', (req: Request, res: Response, next: NextFunction): void => {
-  res.json({ message: 'Hooray' });
+  res.json({ message: 'GraphQL TypeScript Template' });
 })
 
-// Include RESTful here...
+// Include routes here...
 router.get('/example/:id', (req: Request, res: Response, next: NextFunction): void => {
   res.json({ message: 'Example Endpoint', id: req.params.id });
 })

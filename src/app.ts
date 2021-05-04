@@ -5,6 +5,7 @@ import cors from 'cors';
 
 import routes from './routes';
 import gqlInit from './graphql/initialize';
+import example from './middleware/example';
 
 const app: Application = express();
 
@@ -24,6 +25,7 @@ app.use(cors(corsOptions));
 
 
 // Middleware goes here...
+app.use(example);
 
 // Routes
 app.use('/', routes);
